@@ -1,0 +1,21 @@
+[package]
+name = "node-primitives"
+version = "2.0.0"
+authors = ["Teckas Technologies"]
+description = "Substrate-clarus node low-level primitives."
+license = "Unlicense"
+homepage = "https://github.com/Teckas-Technologies"
+repository = "https://github.com/Teckas-Technologies/clarus-node"
+edition = "2021"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[dependencies]
+sp-core = { version = "21.0.0", git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0", default-features = false}
+sp-runtime = { version = "24.0.0", git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0", default-features = false}
+
+[features]
+default = [ "std" ]
+std = [ "sp-core/std", "sp-runtime/std", ]
+

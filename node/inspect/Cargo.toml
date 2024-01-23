@@ -1,0 +1,23 @@
+[package]
+name = "clarus-node-inspect"
+version = "2.0.0"
+authors = ["Teckas Technologies"]
+description = "Substrate-clarus node block inspection tool."
+license = "Unlicense"
+homepage = "https://github.com/Teckas-Technologies"
+repository = "https://github.com/Teckas-Technologies/clarus-node"
+edition = "2021"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[dependencies]
+clap = { version = "4.4.6", features = ["derive"] }
+codec = { package = "parity-scale-codec", version = "3.6.1" }
+thiserror = "1.0"
+sc-cli = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sc-client-api = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sc-service = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0", default-features = false}
+sp-blockchain = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sp-core = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sp-runtime = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }

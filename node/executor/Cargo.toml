@@ -1,0 +1,60 @@
+[package]
+name = "clarus-node-executor"
+version = "3.0.0-dev"
+authors = ["Teckas Technologies"]
+description = "Substrate-clarus node implementation in Rust."
+license = "Unlicense"
+homepage = "https://github.com/Teckas-Technologies"
+repository = "https://github.com/Teckas-Technologies/clarus-node"
+edition = "2021"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[dependencies]
+codec = { package = "parity-scale-codec", version = "3.6.1" }
+scale-info = { version = "2.10.0", features = ["derive", "serde"] }
+frame-benchmarking = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sc-executor = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sp-core = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0", features=["serde"] }
+sp-keystore = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sp-state-machine = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sp-tracing = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sp-trie = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sp-statement-store = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0", features=["serde"] }
+
+#local dependencies
+node-primitives = { path = "../primitives" }
+clarus-runtime = { path = "../../runtime" }
+
+[dev-dependencies]
+criterion = "0.4.0"
+futures = "0.3.21"
+wat = "1.0"
+frame-support = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+frame-system = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+pallet-balances = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+pallet-contracts = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+pallet-im-online = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+pallet-glutton = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+pallet-sudo = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+pallet-timestamp = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+pallet-treasury = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+pallet-transaction-payment = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sp-application-crypto = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+pallet-root-testing = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sp-consensus-babe = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sp-externalities = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sp-keyring = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sp-runtime = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+serde_json = "1.0.108"
+
+#local dependencies
+node-testing = { path = "../testing" }
+
+[features]
+stress-test = []
+
+[[bench]]
+name = "bench"
+harness = false

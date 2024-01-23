@@ -1,0 +1,45 @@
+[package]
+name = "node-bench"
+version = "0.9.0-dev"
+authors = ["Teckas Technologies"]
+description = "Substrate-clarus node integration benchmarks."
+license = "Unlicense"
+homepage = "https://github.com/Teckas-Technologies"
+repository = "https://github.com/Teckas-Technologies/clarus-node"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+array-bytes = "6.1"
+clap = { version = "4.4.6", features = ["derive"] }
+log = "0.4.17"
+sc-client-api = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sp-runtime = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sp-state-machine = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+serde = "1.0.188"
+serde_json = "1.0.108"
+derive_more = { version = "0.99.17", default-features = false, features = ["display"] }
+kvdb = "0.13.0"
+kvdb-rocksdb = "0.19.0"
+sp-trie = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sp-core = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sp-consensus = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sc-basic-authorship = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sp-inherents = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sp-timestamp = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0", default-features = false}
+sp-tracing = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+hash-db = "0.16.0"
+tempfile = "3.1.0"
+fs_extra = "1"
+rand = { version = "0.8.5", features = ["small_rng"] }
+lazy_static = "1.4.0"
+parity-db = "0.4.8"
+sc-transaction-pool = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sc-transaction-pool-api = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+futures = { version = "0.3.21", features = ["thread-pool"] }
+
+#local dependencies
+node-primitives = { path = "../primitives" }
+node-testing = { path = "../testing" }
+clarus-runtime = { path = "../../runtime" }
