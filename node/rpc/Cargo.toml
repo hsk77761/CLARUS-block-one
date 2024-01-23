@@ -1,0 +1,43 @@
+[package]
+name = "node-rpc"
+version = "3.0.0-dev"
+authors = ["Teckas Technologies"]
+description = "Substrate-clarus node rpc methods."
+license = "Unlicense"
+homepage = "https://github.com/Teckas-Technologies"
+repository = "https://github.com/Teckas-Technologies/clarus-node"
+edition = "2021"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[dependencies]
+jsonrpsee = { version = "0.16.2", features = ["server"] }
+pallet-transaction-payment-rpc = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+mmr-rpc = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sc-chain-spec = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sc-client-api = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sc-consensus-babe = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sc-consensus-babe-rpc = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sc-consensus-grandpa = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sc-consensus-grandpa-rpc = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sc-mixnet = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sc-rpc = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sc-rpc-api = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sc-rpc-spec-v2 = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sc-sync-state-rpc = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sc-transaction-pool-api = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sp-api = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sp-block-builder = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sp-blockchain = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sp-consensus = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sp-consensus-babe = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sp-keystore = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sp-runtime = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+sp-statement-store = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+substrate-frame-rpc-system = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+substrate-state-trie-migration-rpc = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "v1.4.0" }
+
+#local dependencies
+node-primitives = { path = "../primitives" }
+

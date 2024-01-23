@@ -1,0 +1,38 @@
+[package]
+name = "clarus-relayer"
+version = "1.0.0"
+edition = "2021"
+license = "GPL-3.0-only"
+authors = [ "Eliott Teissonniere" ]
+homepage = "https://www.teckas.com/"
+repository = "https://github.com/capsule-corp-ternoa/ternoa-pallets"
+description = "Clarus pallet to register relayers"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[dependencies]
+# Substrate Frame
+frame-support = { default-features = false, tag = "v1.4.0", git = "https://github.com/paritytech/polkadot-sdk.git" }
+frame-system  = { default-features = false, tag = "v1.4.0", git = "https://github.com/paritytech/polkadot-sdk.git" }
+# Substrate Orubate
+sp-std = { version = "8.0.0", default-features = false, tag = "v1.4.0", git = "https://github.com/paritytech/polkadot-sdk.git" }
+
+# Rest
+codec = { version = "3.6.1", default-features = false, features = [ "derive", "max-encoded-len" ], package = "parity-scale-codec" }
+scale-info = { version = "2.10.0", default-features = false, features = ["derive"] }
+
+#local
+pallet-token = { version = "1.0.0", path = "../token", default-features = false }
+
+[features]
+default = ["std"]
+std = [
+    "codec/std",
+    "frame-support/std",
+    "frame-system/std",
+    "scale-info/std",
+    "sp-std/std",
+    "pallet-token/std",
+]
+try-runtime = ["frame-support/try-runtime"]

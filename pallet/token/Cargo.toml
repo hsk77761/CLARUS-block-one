@@ -1,0 +1,101 @@
+[package]
+authors = ['Substrate DevHub <https://github.com/substrate-developer-hub>']
+description = 'FRAME pallet template for defining custom runtime logic.'
+edition = '2021'
+homepage = 'https://substrate.dev'
+license = 'Unlicense'
+name = 'pallet-token'
+publish = false
+readme = 'README.md'
+repository = 'https://github.com/substrate-developer-hub/substrate-node-template/'
+version = '1.0.0'
+
+[package.metadata.docs.rs]
+targets = ['x86_64-unknown-linux-gnu']
+
+[dependencies.primitive-types]
+default-features = false
+version = "0.12.0"
+features = ["serde_no_std", "codec"]
+
+[dev-dependencies.sp-core]
+default-features = false
+git = "https://github.com/paritytech/polkadot-sdk.git"
+tag = "v1.4.0"
+version = '21.0.0'
+
+[dev-dependencies.sp-io]
+default-features = false
+git = "https://github.com/paritytech/polkadot-sdk.git"
+tag = "v1.4.0"
+version = '23.0.0'
+
+[dev-dependencies.pallet-balances]
+default-features = false
+git = "https://github.com/paritytech/polkadot-sdk.git"
+tag = "v1.4.0"
+version = '4.0.0-dev'
+
+[dependencies.codec]
+default-features = false
+features = ['derive']
+package = 'parity-scale-codec'
+version = '3.6.1'
+
+[dependencies.frame-benchmarking]
+default-features = false
+git = "https://github.com/paritytech/polkadot-sdk.git"
+optional = true
+tag = "v1.4.0"
+version = '4.0.0-dev'
+
+[dependencies.frame-support]
+default-features = false
+git = "https://github.com/paritytech/polkadot-sdk.git"
+tag = "v1.4.0"
+version = '4.0.0-dev'
+
+[dependencies.frame-system]
+default-features = false
+git = "https://github.com/paritytech/polkadot-sdk.git"
+tag = "v1.4.0"
+version = '4.0.0-dev'
+
+[dependencies.sp-std]
+default-features = false
+git = "https://github.com/paritytech/polkadot-sdk.git"
+tag = "v1.4.0"
+version = '8.0.0'
+
+[dependencies.sp-runtime]
+default-features = false
+git = "https://github.com/paritytech/polkadot-sdk.git"
+tag = "v1.4.0"
+version = '24.0.0'
+
+[dependencies]
+serde_json = { version = '1.0.108', default-features = false, features = ['alloc'] }
+serde = { version = '1.0.188', default-features = false, features = ['derive'] }
+scale-info = { version = "2.10.0", default-features = false, features = ["derive"] }
+
+[dependencies.log]
+default-features = false
+version = '0.4.17'
+
+[features]
+default = ['std']
+runtime-benchmarks = ['frame-benchmarking']
+std = [
+    'codec/std',
+    'scale-info/std',
+    'log/std',
+    'frame-support/std',
+    'frame-system/std',
+    'sp-runtime/std',
+    'sp-std/std',
+    'frame-benchmarking/std',
+    'primitive-types/std',
+    'serde_json/std',
+    'serde/std',
+]
+try-runtime = ['frame-support/try-runtime']
