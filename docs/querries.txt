@@ -1,0 +1,8 @@
+
+1. Relayer or TC can able to mint & burn
+   One address will be set as a relayer, TC & issuer.
+
+2. Execute extrinsic as a TC, i.e mandate
+
+3. Add decimal for wrapped token
+   shows including decimal

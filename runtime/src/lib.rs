@@ -131,7 +131,7 @@ pub const VERSION: RuntimeVersion = RuntimeVersion {
     //   `spec_version`, and `authoring_version` are the same between Wasm and native.
     // This value is set to 100 to notify Polkadot-JS App (https://polkadot.js.org/apps) to use
     // the compatible custom types.
-    spec_version: 341,
+    spec_version: 100,
     impl_version: 1,
     apis: RUNTIME_API_VERSIONS,
     transaction_version: 2,
@@ -172,12 +172,17 @@ const_assert!(NORMAL_DISPATCH_RATIO.deconstruct() >= AVERAGE_ON_INITIALIZE_RATIO
 
 pub struct BaseFilter;
 impl frame_support::traits::Contains<RuntimeCall> for BaseFilter {
-    fn contains(c: &RuntimeCall) -> bool {
-        !matches!(
-            c,
-            // Disable permissionless token transfer/issue.
-            RuntimeCall::Balances(..)
-        )
+    fn contains(call: &RuntimeCall) -> bool {
+        match call {
+			//RuntimeCall::System(_) | RuntimeCall::SafeMode(_) | RuntimeCall::TxPause(_) => true,
+			_ => false,
+		}
+        // !matches!(
+        //     c,
+        //     // Disable permissionless token transfer/issue.
+        //     // RuntimeCall::Balances(..)
+        //     None
+        // )
     }
 }
 
@@ -339,6 +344,41 @@ impl OnUnbalanced<NegativeImbalance> for DealWithFees {
     }
 }
 
+use frame_system::EnsureSigned;
+use frame_support::traits::AsEnsureOriginWithArg;
+use sp_core::ConstU128;
+
+parameter_types! {
+	pub const AssetDeposit: Balance = 100 * DOLLARS;
+	pub const ApprovalDeposit: Balance = 1 * DOLLARS;
+	pub const StringLimit: u32 = 50;
+	pub const MetadataDepositBase: Balance = 10 * DOLLARS;
+	pub const MetadataDepositPerByte: Balance = 1 * DOLLARS;
+}
+
+impl pallet_assets::Config for Runtime {
+	type RuntimeEvent = RuntimeEvent;
+	type Balance = u128;
+	type AssetId = u32;
+	type AssetIdParameter = codec::Compact<u32>;
+	type Currency = Balances;
+	type CreateOrigin = AsEnsureOriginWithArg<EnsureSigned<AccountId>>;
+	type ForceOrigin = EnsureRoot<AccountId>;
+	type AssetDeposit = AssetDeposit;
+	type AssetAccountDeposit = ConstU128<DOLLARS>;
+	type MetadataDepositBase = MetadataDepositBase;
+	type MetadataDepositPerByte = MetadataDepositPerByte;
+	type ApprovalDeposit = ApprovalDeposit;
+	type StringLimit = StringLimit;
+	type Freezer = ();
+	type Extra = ();
+	type CallbackHandle = ();
+	type WeightInfo = pallet_assets::weights::SubstrateWeight<Runtime>;
+	type RemoveItemsLimit = ConstU32<1000>;
+	#[cfg(feature = "runtime-benchmarks")]
+	type BenchmarkHelper = ();
+}
+
 construct_runtime!(
     pub struct Runtime
     {
@@ -370,6 +410,7 @@ construct_runtime!(
         TokenWrapper: pallet_token = 51,
         Relayer: clarus_relayer = 52,
         Mandate: clarus_mandate = 53,
+        Asset: pallet_assets = 54,
         // Nfts: pallet_nfts = 119,
     }
 );

@@ -298,7 +298,7 @@ impl pallet_multisig::Config for Runtime {
 
 /// frame_system config
 impl frame_system::Config for Runtime {
-    type BaseCallFilter = BaseFilter;
+    type BaseCallFilter = frame_support::traits::Everything; // BaseFilter;
     type BlockWeights = RuntimeBlockWeights;
     type BlockLength = RuntimeBlockLength;
     type DbWeight = RocksDbWeight;
@@ -365,4 +365,6 @@ impl pallet_token::Config for Runtime {
     //type CreateOrigin = AsEnsureOriginWithArg<EnsureSigned<AccountId>>;
     //type CallbackHandle = ();
     type WeightInfo = pallet_token::weights::SubstrateWeight<Runtime>;
+    // type ExternalOrigin =
+    // pallet_collective::EnsureProportionAtLeast<AccountId, TechnicalCollective, 1, 2>;
 }

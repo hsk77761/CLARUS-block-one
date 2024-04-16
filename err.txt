@@ -1,0 +1,2378 @@
+warning: unused import: `frame_support::traits::EnsureOriginWithArg`
+  --> pallet/token/src/lib.rs:62:9
+   |
+62 |     use frame_support::traits::EnsureOriginWithArg;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` on by default
+
+warning: unused variable: `total_supply`
+   --> pallet/token/src/lib.rs:492:69
+    |
+492 |             for (asset_id, (issuer, supply, accounts, name, symbol, total_supply, decimals)) in
+    |                                                                     ^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_total_supply`
+    |
+    = note: `#[warn(unused_variables)]` on by default
+
+warning: unused variable: `decimals`
+   --> pallet/token/src/lib.rs:492:83
+    |
+492 |             for (asset_id, (issuer, supply, accounts, name, symbol, total_supply, decimals)) in
+    |                                                                                   ^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_decimals`
+
+warning: structure field `init__erc20_token` should have a snake case name
+   --> pallet/token/src/lib.rs:476:13
+    |
+476 |         pub init__erc20_token: bool,
+    |             ^^^^^^^^^^^^^^^^^ help: convert the identifier to snake case: `init_erc20_token`
+    |
+    = note: `#[warn(non_snake_case)]` on by default
+
+warning: `pallet-token` (lib) generated 4 warnings (run `cargo fix --lib -p pallet-token` to apply 2 suggestions)
+warning: use of deprecated struct `pallet::_::Store`: 
+                 Use of `#[pallet::generate_store(pub(super) trait Store)]` will be removed after July 2023.
+                 Check https://github.com/paritytech/substrate/pull/13535 for more details.
+  --> pallet/mandate/src/lib.rs:52:6
+   |
+52 |     #[pallet::generate_store(pub(super) trait Store)]
+   |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated constant `pallet::warnings::ImplicitCallIndex_0::_w`: 
+                 It is deprecated to use implicit call indices.
+                 Please instead ensure that all calls have a `pallet::call_index` attribute or put the pallet into `dev` mode.
+         
+                 For more info see:
+                     <https://github.com/paritytech/substrate/pull/12891>
+                     <https://github.com/paritytech/substrate/pull/11381>
+  --> pallet/mandate/src/lib.rs:62:16
+   |
+62 |         pub fn mandate(
+   |                ^^^^^^^
+
+warning: `clarus-mandate` (lib) generated 2 warnings
+    Checking clarus-runtime v3.0.0-dev (/home/asmita/personal/project2_bitcoin/clarus/runtime)
+warning: external crate `mmr_rpc` unused in `node_rpc`: remove the dependency or add `use mmr_rpc as _;`
+  --> node/rpc/src/lib.rs:18:1
+   |
+18 | //! A collection of node-specific RPC methods.
+   | ^
+   |
+note: the lint level is defined here
+  --> node/rpc/src/lib.rs:32:9
+   |
+32 | #![warn(unused_crate_dependencies)]
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: external crate `sc_mixnet` unused in `node_rpc`: remove the dependency or add `use sc_mixnet as _;`
+  --> node/rpc/src/lib.rs:18:1
+   |
+18 | //! A collection of node-specific RPC methods.
+   | ^
+
+warning: external crate `sp_statement_store` unused in `node_rpc`: remove the dependency or add `use sp_statement_store as _;`
+  --> node/rpc/src/lib.rs:18:1
+   |
+18 | //! A collection of node-specific RPC methods.
+   | ^
+
+warning: `node-rpc` (lib) generated 3 warnings
+warning: unused import: `DispatchResultWithPostInfo`
+  --> pallet/relayer/src/lib.rs:22:16
+   |
+22 |     dispatch::{DispatchResultWithPostInfo, GetDispatchInfo},
+   |                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` on by default
+
+warning: use of deprecated struct `pallet::_::Store`: 
+                 Use of `#[pallet::generate_store(pub(super) trait Store)]` will be removed after July 2023.
+                 Check https://github.com/paritytech/substrate/pull/13535 for more details.
+  --> pallet/relayer/src/lib.rs:51:6
+   |
+51 |     #[pallet::generate_store(pub(super) trait Store)]
+   |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated constant `pallet::warnings::ImplicitCallIndex_0::_w`: 
+                 It is deprecated to use implicit call indices.
+                 Please instead ensure that all calls have a `pallet::call_index` attribute or put the pallet into `dev` mode.
+         
+                 For more info see:
+                     <https://github.com/paritytech/substrate/pull/12891>
+                     <https://github.com/paritytech/substrate/pull/11381>
+  --> pallet/relayer/src/lib.rs:65:16
+   |
+65 |         pub fn register_relayer(origin: OriginFor<T>, address: <T as frame_system::Config>::AccountId) -> DispatchResult {
+   |                ^^^^^^^^^^^^^^^^
+
+warning: use of deprecated constant `pallet::warnings::ImplicitCallIndex_1::_w`: 
+                 It is deprecated to use implicit call indices.
+                 Please instead ensure that all calls have a `pallet::call_index` attribute or put the pallet into `dev` mode.
+         
+                 For more info see:
+                     <https://github.com/paritytech/substrate/pull/12891>
+                     <https://github.com/paritytech/substrate/pull/11381>
+  --> pallet/relayer/src/lib.rs:81:16
+   |
+81 |         pub fn update_relayer(origin: OriginFor<T>, address: <T as frame_system::Config>::AccountId) -> DispatchResult {
+   |                ^^^^^^^^^^^^^^
+
+warning: use of deprecated constant `pallet::warnings::ImplicitCallIndex_2::_w`: 
+                 It is deprecated to use implicit call indices.
+                 Please instead ensure that all calls have a `pallet::call_index` attribute or put the pallet into `dev` mode.
+         
+                 For more info see:
+                     <https://github.com/paritytech/substrate/pull/12891>
+                     <https://github.com/paritytech/substrate/pull/11381>
+  --> pallet/relayer/src/lib.rs:99:16
+   |
+99 |         pub fn remove_relayer(origin: OriginFor<T>) -> DispatchResult {
+   |                ^^^^^^^^^^^^^^
+
+warning: use of deprecated constant `pallet::warnings::ImplicitCallIndex_3::_w`: 
+                 It is deprecated to use implicit call indices.
+                 Please instead ensure that all calls have a `pallet::call_index` attribute or put the pallet into `dev` mode.
+         
+                 For more info see:
+                     <https://github.com/paritytech/substrate/pull/12891>
+                     <https://github.com/paritytech/substrate/pull/11381>
+   --> pallet/relayer/src/lib.rs:115:16
+    |
+115 | ...   pub fn mint_wrapper_token(origin: OriginFor<T>, address: <T as frame_system::Config>::AccountId, amount: T::Balance, bitcoin_add...
+    |              ^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated constant `pallet::warnings::ImplicitCallIndex_4::_w`: 
+                 It is deprecated to use implicit call indices.
+                 Please instead ensure that all calls have a `pallet::call_index` attribute or put the pallet into `dev` mode.
+         
+                 For more info see:
+                     <https://github.com/paritytech/substrate/pull/12891>
+                     <https://github.com/paritytech/substrate/pull/11381>
+   --> pallet/relayer/src/lib.rs:130:16
+    |
+130 | ...   pub fn burn_wrapper_token(origin: OriginFor<T>, address: <T as frame_system::Config>::AccountId, amount: T::Balance, bitcoin_add...
+    |              ^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated constant `pallet::warnings::ConstantWeight_0::_w`: 
+                 It is deprecated to use hard-coded constant as call weight.
+                 Please instead benchmark all calls or put the pallet into `dev` mode.
+         
+                 For more info see:
+                     <https://github.com/paritytech/substrate/pull/13798>
+  --> pallet/relayer/src/lib.rs:64:26
+   |
+64 |         #[pallet::weight(10000000)]
+   |                          ^^^^^^^^
+
+warning: use of deprecated constant `pallet::warnings::ConstantWeight_1::_w`: 
+                 It is deprecated to use hard-coded constant as call weight.
+                 Please instead benchmark all calls or put the pallet into `dev` mode.
+         
+                 For more info see:
+                     <https://github.com/paritytech/substrate/pull/13798>
+  --> pallet/relayer/src/lib.rs:80:26
+   |
+80 |         #[pallet::weight(10000000)]
+   |                          ^^^^^^^^
+
+warning: use of deprecated constant `pallet::warnings::ConstantWeight_2::_w`: 
+                 It is deprecated to use hard-coded constant as call weight.
+                 Please instead benchmark all calls or put the pallet into `dev` mode.
+         
+                 For more info see:
+                     <https://github.com/paritytech/substrate/pull/13798>
+  --> pallet/relayer/src/lib.rs:98:26
+   |
+98 |         #[pallet::weight(10000000)]
+   |                          ^^^^^^^^
+
+warning: use of deprecated constant `pallet::warnings::ConstantWeight_3::_w`: 
+                 It is deprecated to use hard-coded constant as call weight.
+                 Please instead benchmark all calls or put the pallet into `dev` mode.
+         
+                 For more info see:
+                     <https://github.com/paritytech/substrate/pull/13798>
+   --> pallet/relayer/src/lib.rs:114:26
+    |
+114 |         #[pallet::weight(10000000)]
+    |                          ^^^^^^^^
+
+warning: use of deprecated constant `pallet::warnings::ConstantWeight_4::_w`: 
+                 It is deprecated to use hard-coded constant as call weight.
+                 Please instead benchmark all calls or put the pallet into `dev` mode.
+         
+                 For more info see:
+                     <https://github.com/paritytech/substrate/pull/13798>
+   --> pallet/relayer/src/lib.rs:129:26
+    |
+129 |         #[pallet::weight(10000000)]
+    |                          ^^^^^^^^
+
+warning: unused import: `GetDispatchInfo`
+  --> pallet/relayer/src/lib.rs:22:44
+   |
+22 |     dispatch::{DispatchResultWithPostInfo, GetDispatchInfo},
+   |                                            ^^^^^^^^^^^^^^^
+
+warning: unused import: `UnfilteredDispatchable`
+  --> pallet/relayer/src/lib.rs:24:30
+   |
+24 |     traits::{StorageVersion, UnfilteredDispatchable},
+   |                              ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: `clarus-relayer` (lib) generated 14 warnings (run `cargo fix --lib -p clarus-relayer` to apply 1 suggestion)
+error[E0433]: failed to resolve: use of undeclared crate or module `clarus_relayer`
+   --> runtime/src/lib.rs:371:18
+    |
+371 |         Relayer: clarus_relayer = 52, 
+    |                  ^^^^^^^^^^^^^^ use of undeclared crate or module `clarus_relayer`
+
+error[E0412]: cannot find type `Runtime` in this scope
+ --> runtime/src/config.rs:4:45
+  |
+4 | impl pallet_transaction_payment::Config for Runtime {
+  |                                             ^^^^^^^ not found in this scope
+  |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+  |
+4 | impl pallet_transaction_payment::Config for sp_statement_store::Error {
+  |                                             ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `RuntimeEvent` in this scope
+ --> runtime/src/config.rs:5:25
+  |
+5 |     type RuntimeEvent = RuntimeEvent;
+  |                         ^^^^^^^^^^^^ help: you might have meant to use the associated type: `Self::RuntimeEvent`
+
+error[E0412]: cannot find type `Balances` in this scope
+  --> runtime/src/config.rs:6:48
+   |
+6  |     type OnChargeTransaction = CurrencyAdapter<Balances, DealWithFees>;
+   |                                                ^^^^^^^^
+   |
+  ::: /home/asmita/personal/project2_bitcoin/clarus/node/primitives/src/lib.rs:43:1
+   |
+43 | pub type Balance = u128;
+   | ---------------- similarly named type alias `Balance` defined here
+   |
+help: a type alias with a similar name exists
+   |
+6  |     type OnChargeTransaction = CurrencyAdapter<Balance, DealWithFees>;
+   |                                                ~~~~~~~
+help: you might be missing a type parameter
+   |
+4  | impl<Balances> pallet_transaction_payment::Config for Runtime {
+   |     ++++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+  --> runtime/src/config.rs:26:33
+   |
+26 | impl pallet_staking::Config for Runtime {
+   |                                 ^^^^^^^ not found in this scope
+   |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+   |
+26 | impl pallet_staking::Config for sp_statement_store::Error {
+   |                                 ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `Balances` in this scope
+  --> runtime/src/config.rs:27:21
+   |
+27 |     type Currency = Balances;
+   |                     ^^^^^^^^ help: a type alias with a similar name exists: `Balance`
+   |
+  ::: /home/asmita/personal/project2_bitcoin/clarus/node/primitives/src/lib.rs:43:1
+   |
+43 | pub type Balance = u128;
+   | ---------------- similarly named type alias `Balance` defined here
+
+error[E0412]: cannot find type `Timestamp` in this scope
+  --> runtime/src/config.rs:29:21
+   |
+29 |     type UnixTime = Timestamp;
+   |                     ^^^^^^^^^ not found in this scope
+   |
+help: consider importing one of these items
+   |
+1  + use node_primitives::Timestamp;
+   |
+1  + use sp_api::offchain::Timestamp;
+   |
+1  + use sp_core::offchain::Timestamp;
+   |
+1  + use sp_runtime::offchain::Timestamp;
+   |
+
+error[E0412]: cannot find type `RuntimeEvent` in this scope
+  --> runtime/src/config.rs:32:25
+   |
+32 |     type RuntimeEvent = RuntimeEvent;
+   |                         ^^^^^^^^^^^^ help: you might have meant to use the associated type: `Self::RuntimeEvent`
+
+error[E0412]: cannot find type `Session` in this scope
+  --> runtime/src/config.rs:42:27
+   |
+42 |       type NextNewSession = Session;
+   |                             ^^^^^^^ help: a struct with a similar name exists: `Version`
+   |
+  ::: runtime/src/common_types.rs:3:1
+   |
+3  | / parameter_types! {
+4  | |     pub const BlockHashCount: BlockNumber = 2400;
+5  | |     pub const Version: RuntimeVersion = VERSION;
+6  | |     pub RuntimeBlockLength: BlockLength =
+...  |
+26 | |     pub MaxCollectivesProposalWeight: Weight = Perbill::from_percent(50) * RuntimeBlockWeights::get().max_block;
+27 | | }
+   | |_- similarly named struct `Version` defined here
+
+error[E0412]: cannot find type `ElectionProviderMultiPhase` in this scope
+   --> runtime/src/config.rs:45:29
+    |
+45  |       type ElectionProvider = ElectionProviderMultiPhase;
+    |                               ^^^^^^^^^^^^^^^^^^^^^^^^^^ help: a struct with a similar name exists: `ElectionBoundsMultiPhase`
+    |
+   ::: runtime/src/common_types.rs:156:1
+    |
+156 | / parameter_types! {
+157 | |     pub ElectionBoundsOnChain: ElectionBounds = ElectionBoundsBuilder::default()
+158 | |         .voters_count(5_000.into())
+159 | |         .targets_count(1_250.into())
+...   |
+165 | |         .build();
+166 | | }
+    | |_- similarly named struct `ElectionBoundsMultiPhase` defined here
+
+error[E0412]: cannot find type `VoterList` in this scope
+  --> runtime/src/config.rs:47:22
+   |
+47 |     type VoterList = VoterList;
+   |                      ^^^^^^^^^ help: you might have meant to use the associated type: `Self::VoterList`
+
+error[E0412]: cannot find type `NominationPools` in this scope
+  --> runtime/src/config.rs:53:27
+   |
+53 |     type EventListeners = NominationPools;
+   |                           ^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0412]: cannot find type `Runtime` in this scope
+  --> runtime/src/config.rs:54:64
+   |
+54 |     type WeightInfo = pallet_staking::weights::SubstrateWeight<Runtime>;
+   |                                                                ^^^^^^^ not found in this scope
+   |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+   |
+54 |     type WeightInfo = pallet_staking::weights::SubstrateWeight<sp_statement_store::Error>;
+   |                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+   |
+26 | impl<Runtime> pallet_staking::Config for Runtime {
+   |     +++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+  --> runtime/src/config.rs:59:42
+   |
+59 | impl pallet_nomination_pools::Config for Runtime {
+   |                                          ^^^^^^^ not found in this scope
+   |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+   |
+59 | impl pallet_nomination_pools::Config for sp_statement_store::Error {
+   |                                          ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `RuntimeEvent` in this scope
+  --> runtime/src/config.rs:60:25
+   |
+60 |     type RuntimeEvent = RuntimeEvent;
+   |                         ^^^^^^^^^^^^ help: you might have meant to use the associated type: `Self::RuntimeEvent`
+
+error[E0412]: cannot find type `Balances` in this scope
+  --> runtime/src/config.rs:63:21
+   |
+63 |     type Currency = Balances;
+   |                     ^^^^^^^^ help: a type alias with a similar name exists: `Balance`
+   |
+  ::: /home/asmita/personal/project2_bitcoin/clarus/node/primitives/src/lib.rs:43:1
+   |
+43 | pub type Balance = u128;
+   | ---------------- similarly named type alias `Balance` defined here
+
+error[E0412]: cannot find type `Staking` in this scope
+   --> runtime/src/config.rs:69:20
+    |
+69  |     type Staking = Staking;
+    |                    ^^^^^^^
+    |
+   ::: /home/asmita/.rustup/toolchains/nightly-2023-09-27-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/string.rs:365:1
+    |
+365 | pub struct String {
+    | ----------------- similarly named struct `String` defined here
+    |
+help: you might have meant to use the associated type
+    |
+69  |     type Staking = Self::Staking;
+    |                    ~~~~~~~~~~~~~
+help: a struct with a similar name exists
+    |
+69  |     type Staking = String;
+    |                    ~~~~~~
+
+error[E0412]: cannot find type `RuntimeFreezeReason` in this scope
+  --> runtime/src/config.rs:73:32
+   |
+73 |     type RuntimeFreezeReason = RuntimeFreezeReason;
+   |                                ^^^^^^^^^^^^^^^^^^^ help: you might have meant to use the associated type: `Self::RuntimeFreezeReason`
+
+error[E0412]: cannot find type `Runtime` in this scope
+  --> runtime/src/config.rs:77:55
+   |
+77 | impl pallet_election_provider_multi_phase::Config for Runtime {
+   |                                                       ^^^^^^^ not found in this scope
+   |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+   |
+77 | impl pallet_election_provider_multi_phase::Config for sp_statement_store::Error {
+   |                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `RuntimeEvent` in this scope
+  --> runtime/src/config.rs:78:25
+   |
+78 |     type RuntimeEvent = RuntimeEvent;
+   |                         ^^^^^^^^^^^^ help: you might have meant to use the associated type: `Self::RuntimeEvent`
+
+error[E0412]: cannot find type `Balances` in this scope
+  --> runtime/src/config.rs:79:21
+   |
+79 |     type Currency = Balances;
+   |                     ^^^^^^^^ help: a type alias with a similar name exists: `Balance`
+   |
+  ::: /home/asmita/personal/project2_bitcoin/clarus/node/primitives/src/lib.rs:43:1
+   |
+43 | pub type Balance = u128;
+   | ---------------- similarly named type alias `Balance` defined here
+
+error[E0412]: cannot find type `TransactionPayment` in this scope
+   --> runtime/src/config.rs:80:28
+    |
+80  |       type EstimateCallFee = TransactionPayment;
+    |                              ^^^^^^^^^^^^^^^^^^ help: a struct with a similar name exists: `TransactionByteFee`
+    |
+   ::: runtime/src/common_types.rs:147:1
+    |
+147 | / parameter_types! {
+148 | |     pub const TransactionByteFee: Balance = 10 * MILLICENTS;
+149 | |     pub const OperationalFeeMultiplier: u8 = 5;
+150 | |     pub const TargetBlockFullness: Perquintill = Perquintill::from_percent(25);
+...   |
+153 | |     pub MaximumMultiplier: Multiplier = Bounded::max_value();
+154 | | }
+    | |_- similarly named struct `TransactionByteFee` defined here
+
+error[E0412]: cannot find type `Staking` in this scope
+   --> runtime/src/config.rs:98:25
+    |
+98  |     type DataProvider = Staking;
+    |                         ^^^^^^^ help: a struct with a similar name exists: `String`
+    |
+   ::: /home/asmita/.rustup/toolchains/nightly-2023-09-27-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/string.rs:365:1
+    |
+365 | pub struct String {
+    | ----------------- similarly named struct `String` defined here
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:110:60
+    |
+110 | impl pallet_election_provider_multi_phase::MinerConfig for Runtime {
+    |                                                            ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+110 | impl pallet_election_provider_multi_phase::MinerConfig for sp_statement_store::Error {
+    |                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:146:19
+    |
+146 |     type System = Runtime;
+    |                   ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+146 |     type System = sp_statement_store::Error;
+    |                   ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:149:66
+    |
+149 |         pallet_election_provider_multi_phase::SolutionAccuracyOf<Runtime>,
+    |                                                                  ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+149 |         pallet_election_provider_multi_phase::SolutionAccuracyOf<sp_statement_store::Error>,
+    |                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+    |
+145 | impl<Runtime> onchain::Config for OnChainSeqPhragmen {
+    |     +++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:151:26
+    |
+151 |     type DataProvider = <Runtime as pallet_election_provider_multi_phase::Config>::DataProvider;
+    |                          ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+151 |     type DataProvider = <sp_statement_store::Error as pallet_election_provider_multi_phase::Config>::DataProvider;
+    |                          ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:152:81
+    |
+152 |     type WeightInfo = frame_election_provider_support::weights::SubstrateWeight<Runtime>;
+    |                                                                                 ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+152 |     type WeightInfo = frame_election_provider_support::weights::SubstrateWeight<sp_statement_store::Error>;
+    |                                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+    |
+145 | impl<Runtime> onchain::Config for OnChainSeqPhragmen {
+    |     +++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:153:24
+    |
+153 |     type MaxWinners = <Runtime as pallet_election_provider_multi_phase::Config>::MaxWinners;
+    |                        ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+153 |     type MaxWinners = <sp_statement_store::Error as pallet_election_provider_multi_phase::Config>::MaxWinners;
+    |                        ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:159:33
+    |
+159 | impl pallet_grandpa::Config for Runtime {
+    |                                 ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+159 | impl pallet_grandpa::Config for sp_statement_store::Error {
+    |                                 ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `RuntimeEvent` in this scope
+   --> runtime/src/config.rs:160:25
+    |
+160 |     type RuntimeEvent = RuntimeEvent;
+    |                         ^^^^^^^^^^^^ help: you might have meant to use the associated type: `Self::RuntimeEvent`
+
+error[E0412]: cannot find type `Historical` in this scope
+   --> runtime/src/config.rs:165:27
+    |
+165 |     type KeyOwnerProof = <Historical as KeyOwnerProofSystem<(KeyTypeId, GrandpaId)>>::Proof;
+    |                           ^^^^^^^^^^ not found in this scope
+
+error[E0412]: cannot find type `Offences` in this scope
+   --> runtime/src/config.rs:167:56
+    |
+167 |         pallet_grandpa::EquivocationReportSystem<Self, Offences, Historical, ReportLongevity>;
+    |                                                        ^^^^^^^^ not found in this scope
+    |
+help: you might be missing a type parameter
+    |
+159 | impl<Offences> pallet_grandpa::Config for Runtime {
+    |     ++++++++++
+
+error[E0412]: cannot find type `Historical` in this scope
+   --> runtime/src/config.rs:167:66
+    |
+167 |         pallet_grandpa::EquivocationReportSystem<Self, Offences, Historical, ReportLongevity>;
+    |                                                                  ^^^^^^^^^^ not found in this scope
+    |
+help: you might be missing a type parameter
+    |
+159 | impl<Historical> pallet_grandpa::Config for Runtime {
+    |     ++++++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:172:35
+    |
+172 | impl pallet_im_online::Config for Runtime {
+    |                                   ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+172 | impl pallet_im_online::Config for sp_statement_store::Error {
+    |                                   ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `RuntimeEvent` in this scope
+   --> runtime/src/config.rs:174:25
+    |
+174 |     type RuntimeEvent = RuntimeEvent;
+    |                         ^^^^^^^^^^^^ help: you might have meant to use the associated type: `Self::RuntimeEvent`
+
+error[E0412]: cannot find type `Babe` in this scope
+   --> runtime/src/config.rs:175:32
+    |
+175 |     type NextSessionRotation = Babe;
+    |                                ^^^^ not found in this scope
+
+error[E0412]: cannot find type `Historical` in this scope
+   --> runtime/src/config.rs:176:25
+    |
+176 |     type ValidatorSet = Historical;
+    |                         ^^^^^^^^^^ not found in this scope
+
+error[E0412]: cannot find type `Offences` in this scope
+   --> runtime/src/config.rs:177:35
+    |
+177 |     type ReportUnresponsiveness = Offences;
+    |                                   ^^^^^^^^ not found in this scope
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:179:66
+    |
+179 |     type WeightInfo = pallet_im_online::weights::SubstrateWeight<Runtime>;
+    |                                                                  ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+179 |     type WeightInfo = pallet_im_online::weights::SubstrateWeight<sp_statement_store::Error>;
+    |                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+    |
+172 | impl<Runtime> pallet_im_online::Config for Runtime {
+    |     +++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:185:34
+    |
+185 | impl pallet_offences::Config for Runtime {
+    |                                  ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+185 | impl pallet_offences::Config for sp_statement_store::Error {
+    |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `RuntimeEvent` in this scope
+   --> runtime/src/config.rs:186:25
+    |
+186 |     type RuntimeEvent = RuntimeEvent;
+    |                         ^^^^^^^^^^^^ help: you might have meant to use the associated type: `Self::RuntimeEvent`
+
+error[E0412]: cannot find type `Staking` in this scope
+   --> runtime/src/config.rs:188:29
+    |
+188 |     type OnOffenceHandler = Staking;
+    |                             ^^^^^^^ help: a struct with a similar name exists: `String`
+    |
+   ::: /home/asmita/.rustup/toolchains/nightly-2023-09-27-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/string.rs:365:1
+    |
+365 | pub struct String {
+    | ----------------- similarly named struct `String` defined here
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:192:64
+    |
+192 | impl pallet_bags_list::Config<pallet_bags_list::Instance1> for Runtime {
+    |                                                                ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+192 | impl pallet_bags_list::Config<pallet_bags_list::Instance1> for sp_statement_store::Error {
+    |                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `RuntimeEvent` in this scope
+   --> runtime/src/config.rs:193:25
+    |
+193 |     type RuntimeEvent = RuntimeEvent;
+    |                         ^^^^^^^^^^^^ help: you might have meant to use the associated type: `Self::RuntimeEvent`
+
+error[E0412]: cannot find type `Staking` in this scope
+   --> runtime/src/config.rs:194:26
+    |
+194 |     type ScoreProvider = Staking;
+    |                          ^^^^^^^ help: a struct with a similar name exists: `String`
+    |
+   ::: /home/asmita/.rustup/toolchains/nightly-2023-09-27-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/string.rs:365:1
+    |
+365 | pub struct String {
+    | ----------------- similarly named struct `String` defined here
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:195:66
+    |
+195 |     type WeightInfo = pallet_bags_list::weights::SubstrateWeight<Runtime>;
+    |                                                                  ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+195 |     type WeightInfo = pallet_bags_list::weights::SubstrateWeight<sp_statement_store::Error>;
+    |                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+    |
+192 | impl<Runtime> pallet_bags_list::Config<pallet_bags_list::Instance1> for Runtime {
+    |     +++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:201:30
+    |
+201 | impl pallet_sudo::Config for Runtime {
+    |                              ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+201 | impl pallet_sudo::Config for sp_statement_store::Error {
+    |                              ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `RuntimeEvent` in this scope
+   --> runtime/src/config.rs:202:25
+    |
+202 |     type RuntimeEvent = RuntimeEvent;
+    |                         ^^^^^^^^^^^^ help: you might have meant to use the associated type: `Self::RuntimeEvent`
+
+error[E0412]: cannot find type `RuntimeCall` in this scope
+   --> runtime/src/config.rs:203:24
+    |
+203 |     type RuntimeCall = RuntimeCall;
+    |                        ^^^^^^^^^^^ help: you might have meant to use the associated type: `Self::RuntimeCall`
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:204:61
+    |
+204 |     type WeightInfo = pallet_sudo::weights::SubstrateWeight<Runtime>;
+    |                                                             ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+204 |     type WeightInfo = pallet_sudo::weights::SubstrateWeight<sp_statement_store::Error>;
+    |                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+    |
+201 | impl<Runtime> pallet_sudo::Config for Runtime {
+    |     +++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:208:33
+    |
+208 | impl pallet_session::Config for Runtime {
+    |                                 ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+208 | impl pallet_session::Config for sp_statement_store::Error {
+    |                                 ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `RuntimeEvent` in this scope
+   --> runtime/src/config.rs:209:25
+    |
+209 |     type RuntimeEvent = RuntimeEvent;
+    |                         ^^^^^^^^^^^^ help: you might have meant to use the associated type: `Self::RuntimeEvent`
+
+error[E0412]: cannot find type `Babe` in this scope
+   --> runtime/src/config.rs:212:29
+    |
+212 |     type ShouldEndSession = Babe;
+    |                             ^^^^ not found in this scope
+
+error[E0412]: cannot find type `Babe` in this scope
+   --> runtime/src/config.rs:213:32
+    |
+213 |     type NextSessionRotation = Babe;
+    |                                ^^^^ not found in this scope
+
+error[E0412]: cannot find type `Staking` in this scope
+   --> runtime/src/config.rs:214:80
+    |
+214 |     type SessionManager = pallet_session::historical::NoteHistoricalRoot<Self, Staking>;
+    |                                                                                ^^^^^^^
+    |
+   ::: /home/asmita/.rustup/toolchains/nightly-2023-09-27-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/string.rs:365:1
+    |
+365 | pub struct String {
+    | ----------------- similarly named struct `String` defined here
+    |
+help: a struct with a similar name exists
+    |
+214 |     type SessionManager = pallet_session::historical::NoteHistoricalRoot<Self, String>;
+    |                                                                                ~~~~~~
+help: you might be missing a type parameter
+    |
+208 | impl<Staking> pallet_session::Config for Runtime {
+    |     +++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:217:64
+    |
+217 |     type WeightInfo = pallet_session::weights::SubstrateWeight<Runtime>;
+    |                                                                ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+217 |     type WeightInfo = pallet_session::weights::SubstrateWeight<sp_statement_store::Error>;
+    |                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+    |
+208 | impl<Runtime> pallet_session::Config for Runtime {
+    |     +++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:221:45
+    |
+221 | impl pallet_session::historical::Config for Runtime {
+    |                                             ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+221 | impl pallet_session::historical::Config for sp_statement_store::Error {
+    |                                             ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:223:60
+    |
+223 |     type FullIdentificationOf = pallet_staking::ExposureOf<Runtime>;
+    |                                                            ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+223 |     type FullIdentificationOf = pallet_staking::ExposureOf<sp_statement_store::Error>;
+    |                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+    |
+221 | impl<Runtime> pallet_session::historical::Config for Runtime {
+    |     +++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:227:36
+    |
+227 | impl pallet_authorship::Config for Runtime {
+    |                                    ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+227 | impl pallet_authorship::Config for sp_statement_store::Error {
+    |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `Babe` in this scope
+   --> runtime/src/config.rs:228:72
+    |
+228 |     type FindAuthor = pallet_session::FindAccountFromAuthorIndex<Self, Babe>;
+    |                                                                        ^^^^ not found in this scope
+    |
+help: you might be missing a type parameter
+    |
+227 | impl<Babe> pallet_authorship::Config for Runtime {
+    |     ++++++
+
+error[E0412]: cannot find type `Staking` in this scope
+   --> runtime/src/config.rs:229:26
+    |
+229 |     type EventHandler = (Staking, ImOnline);
+    |                          ^^^^^^^ help: a struct with a similar name exists: `String`
+    |
+   ::: /home/asmita/.rustup/toolchains/nightly-2023-09-27-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/string.rs:365:1
+    |
+365 | pub struct String {
+    | ----------------- similarly named struct `String` defined here
+
+error[E0412]: cannot find type `ImOnline` in this scope
+   --> runtime/src/config.rs:229:35
+    |
+229 |     type EventHandler = (Staking, ImOnline);
+    |                                   ^^^^^^^^ help: a type alias with a similar name exists: `ImOnlineId`
+    |
+   ::: /home/asmita/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/a3e4fce/substrate/frame/im-online/src/lib.rs:128:2
+    |
+128 |     pub type AuthorityId = app_sr25519::Public;
+    |     -------------------- similarly named type alias `ImOnlineId` defined here
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:233:45
+    |
+233 | impl pallet_authority_discovery::Config for Runtime {
+    |                                             ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+233 | impl pallet_authority_discovery::Config for sp_statement_store::Error {
+    |                                             ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:238:35
+    |
+238 | impl pallet_timestamp::Config for Runtime {
+    |                                   ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+238 | impl pallet_timestamp::Config for sp_statement_store::Error {
+    |                                   ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `Babe` in this scope
+   --> runtime/src/config.rs:240:27
+    |
+240 |     type OnTimestampSet = Babe;
+    |                           ^^^^ not found in this scope
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:242:66
+    |
+242 |     type WeightInfo = pallet_timestamp::weights::SubstrateWeight<Runtime>;
+    |                                                                  ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+242 |     type WeightInfo = pallet_timestamp::weights::SubstrateWeight<sp_statement_store::Error>;
+    |                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+    |
+238 | impl<Runtime> pallet_timestamp::Config for Runtime {
+    |     +++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:246:34
+    |
+246 | impl pallet_balances::Config for Runtime {
+    |                                  ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+246 | impl pallet_balances::Config for sp_statement_store::Error {
+    |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `RuntimeEvent` in this scope
+   --> runtime/src/config.rs:252:25
+    |
+252 |     type RuntimeEvent = RuntimeEvent;
+    |                         ^^^^^^^^^^^^ help: you might have meant to use the associated type: `Self::RuntimeEvent`
+
+error[E0412]: cannot find type `System` in this scope
+   --> runtime/src/config.rs:254:25
+    |
+254 |     type AccountStore = System;
+    |                         ^^^^^^ not found in this scope
+    |
+help: consider importing one of these items
+    |
+1   + use codec::alloc::alloc::System;
+    |
+1   + use sp_std::alloc::System;
+    |
+1   + use std::alloc::System;
+    |
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:255:65
+    |
+255 |     type WeightInfo = pallet_balances::weights::SubstrateWeight<Runtime>;
+    |                                                                 ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+255 |     type WeightInfo = pallet_balances::weights::SubstrateWeight<sp_statement_store::Error>;
+    |                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+    |
+246 | impl<Runtime> pallet_balances::Config for Runtime {
+    |     +++++++++
+
+error[E0412]: cannot find type `RuntimeFreezeReason` in this scope
+   --> runtime/src/config.rs:256:29
+    |
+256 |     type FreezeIdentifier = RuntimeFreezeReason;
+    |                             ^^^^^^^^^^^^^^^^^^^ help: you might have meant to use the associated type: `Self::RuntimeFreezeReason`
+
+error[E0412]: cannot find type `RuntimeHoldReason` in this scope
+   --> runtime/src/config.rs:258:30
+    |
+258 |     type RuntimeHoldReason = RuntimeHoldReason;
+    |                              ^^^^^^^^^^^^^^^^^ help: you might have meant to use the associated type: `Self::RuntimeHoldReason`
+
+error[E0412]: cannot find type `RuntimeFreezeReason` in this scope
+   --> runtime/src/config.rs:260:32
+    |
+260 |     type RuntimeFreezeReason = RuntimeFreezeReason;
+    |                                ^^^^^^^^^^^^^^^^^^^ help: you might have meant to use the associated type: `Self::RuntimeFreezeReason`
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:264:30
+    |
+264 | impl pallet_babe::Config for Runtime {
+    |                              ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+264 | impl pallet_babe::Config for sp_statement_store::Error {
+    |                              ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `Session` in this scope
+   --> runtime/src/config.rs:268:31
+    |
+268 |       type DisabledValidators = Session;
+    |                                 ^^^^^^^ help: a struct with a similar name exists: `Version`
+    |
+   ::: runtime/src/common_types.rs:3:1
+    |
+3   | / parameter_types! {
+4   | |     pub const BlockHashCount: BlockNumber = 2400;
+5   | |     pub const Version: RuntimeVersion = VERSION;
+6   | |     pub RuntimeBlockLength: BlockLength =
+...   |
+26  | |     pub MaxCollectivesProposalWeight: Weight = Perbill::from_percent(50) * RuntimeBlockWeights::get().max_block;
+27  | | }
+    | |_- similarly named struct `Version` defined here
+
+error[E0412]: cannot find type `Historical` in this scope
+   --> runtime/src/config.rs:273:10
+    |
+273 |         <Historical as KeyOwnerProofSystem<(KeyTypeId, pallet_babe::AuthorityId)>>::Proof;
+    |          ^^^^^^^^^^ not found in this scope
+
+error[E0412]: cannot find type `Offences` in this scope
+   --> runtime/src/config.rs:275:53
+    |
+275 |         pallet_babe::EquivocationReportSystem<Self, Offences, Historical, ReportLongevity>;
+    |                                                     ^^^^^^^^ not found in this scope
+    |
+help: you might be missing a type parameter
+    |
+264 | impl<Offences> pallet_babe::Config for Runtime {
+    |     ++++++++++
+
+error[E0412]: cannot find type `Historical` in this scope
+   --> runtime/src/config.rs:275:63
+    |
+275 |         pallet_babe::EquivocationReportSystem<Self, Offences, Historical, ReportLongevity>;
+    |                                                               ^^^^^^^^^^ not found in this scope
+    |
+help: you might be missing a type parameter
+    |
+264 | impl<Historical> pallet_babe::Config for Runtime {
+    |     ++++++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:280:33
+    |
+280 | impl pallet_indices::Config for Runtime {
+    |                                 ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+280 | impl pallet_indices::Config for sp_statement_store::Error {
+    |                                 ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `Balances` in this scope
+   --> runtime/src/config.rs:282:21
+    |
+282 |     type Currency = Balances;
+    |                     ^^^^^^^^ help: a type alias with a similar name exists: `Balance`
+    |
+   ::: /home/asmita/personal/project2_bitcoin/clarus/node/primitives/src/lib.rs:43:1
+    |
+43  | pub type Balance = u128;
+    | ---------------- similarly named type alias `Balance` defined here
+
+error[E0412]: cannot find type `RuntimeEvent` in this scope
+   --> runtime/src/config.rs:284:25
+    |
+284 |     type RuntimeEvent = RuntimeEvent;
+    |                         ^^^^^^^^^^^^ help: you might have meant to use the associated type: `Self::RuntimeEvent`
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:285:64
+    |
+285 |     type WeightInfo = pallet_indices::weights::SubstrateWeight<Runtime>;
+    |                                                                ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+285 |     type WeightInfo = pallet_indices::weights::SubstrateWeight<sp_statement_store::Error>;
+    |                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+    |
+280 | impl<Runtime> pallet_indices::Config for Runtime {
+    |     +++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:289:34
+    |
+289 | impl pallet_multisig::Config for Runtime {
+    |                                  ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+289 | impl pallet_multisig::Config for sp_statement_store::Error {
+    |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `RuntimeEvent` in this scope
+   --> runtime/src/config.rs:290:25
+    |
+290 |     type RuntimeEvent = RuntimeEvent;
+    |                         ^^^^^^^^^^^^ help: you might have meant to use the associated type: `Self::RuntimeEvent`
+
+error[E0412]: cannot find type `RuntimeCall` in this scope
+   --> runtime/src/config.rs:291:24
+    |
+291 |     type RuntimeCall = RuntimeCall;
+    |                        ^^^^^^^^^^^ help: you might have meant to use the associated type: `Self::RuntimeCall`
+
+error[E0412]: cannot find type `Balances` in this scope
+   --> runtime/src/config.rs:292:21
+    |
+292 |     type Currency = Balances;
+    |                     ^^^^^^^^ help: a type alias with a similar name exists: `Balance`
+    |
+   ::: /home/asmita/personal/project2_bitcoin/clarus/node/primitives/src/lib.rs:43:1
+    |
+43  | pub type Balance = u128;
+    | ---------------- similarly named type alias `Balance` defined here
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:296:65
+    |
+296 |     type WeightInfo = pallet_multisig::weights::SubstrateWeight<Runtime>;
+    |                                                                 ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+296 |     type WeightInfo = pallet_multisig::weights::SubstrateWeight<sp_statement_store::Error>;
+    |                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+    |
+289 | impl<Runtime> pallet_multisig::Config for Runtime {
+    |     +++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:300:31
+    |
+300 | impl frame_system::Config for Runtime {
+    |                               ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+300 | impl frame_system::Config for sp_statement_store::Error {
+    |                               ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `RuntimeOrigin` in this scope
+   --> runtime/src/config.rs:305:26
+    |
+305 |     type RuntimeOrigin = RuntimeOrigin;
+    |                          ^^^^^^^^^^^^^ help: you might have meant to use the associated type: `Self::RuntimeOrigin`
+
+error[E0412]: cannot find type `RuntimeCall` in this scope
+   --> runtime/src/config.rs:306:24
+    |
+306 |     type RuntimeCall = RuntimeCall;
+    |                        ^^^^^^^^^^^ help: you might have meant to use the associated type: `Self::RuntimeCall`
+
+error[E0412]: cannot find type `Indices` in this scope
+   --> runtime/src/config.rs:311:19
+    |
+311 |     type Lookup = Indices;
+    |                   ^^^^^^^ not found in this scope
+
+error[E0412]: cannot find type `RuntimeEvent` in this scope
+   --> runtime/src/config.rs:313:25
+    |
+313 |     type RuntimeEvent = RuntimeEvent;
+    |                         ^^^^^^^^^^^^ help: you might have meant to use the associated type: `Self::RuntimeEvent`
+
+error[E0412]: cannot find type `PalletInfo` in this scope
+   --> runtime/src/config.rs:316:23
+    |
+316 |     type PalletInfo = PalletInfo;
+    |                       ^^^^^^^^^^
+    |
+   ::: /home/asmita/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/a3e4fce/substrate/frame/support/src/lib.rs:122:1
+    |
+122 | pub struct PalletId(pub [u8; 8]);
+    | ------------------- similarly named struct `PalletId` defined here
+    |
+help: you might have meant to use the associated type
+    |
+316 |     type PalletInfo = Self::PalletInfo;
+    |                       ~~~~~~~~~~~~~~~~
+help: a struct with a similar name exists
+    |
+316 |     type PalletInfo = PalletId;
+    |                       ~~~~~~~~
+help: consider importing one of these items
+    |
+1   + use frame_benchmarking::__private::traits::PalletInfo;
+    |
+1   + use frame_support::traits::PalletInfo;
+    |
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:320:68
+    |
+320 |     type SystemWeightInfo = frame_system::weights::SubstrateWeight<Runtime>;
+    |                                                                    ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+320 |     type SystemWeightInfo = frame_system::weights::SubstrateWeight<sp_statement_store::Error>;
+    |                                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+    |
+300 | impl<Runtime> frame_system::Config for Runtime {
+    |     +++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:328:57
+    |
+328 | impl pallet_collective::Config<TechnicalCollective> for Runtime {
+    |                                                         ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+328 | impl pallet_collective::Config<TechnicalCollective> for sp_statement_store::Error {
+    |                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `RuntimeOrigin` in this scope
+   --> runtime/src/config.rs:329:23
+    |
+329 |     type RuntimeOrigin = RuntimeOrigin;
+    |                          ^^^^^^^^^^^^^ help: you might have meant to use the associated type: `Self::RuntimeOrigin`
+
+error[E0412]: cannot find type `RuntimeCall` in this scope
+   --> runtime/src/config.rs:330:18
+    |
+330 |     type Proposal = RuntimeCall;
+    |                     ^^^^^^^^^^^ not found in this scope
+
+error[E0412]: cannot find type `RuntimeEvent` in this scope
+   --> runtime/src/config.rs:331:22
+    |
+331 |     type RuntimeEvent = RuntimeEvent;
+    |                         ^^^^^^^^^^^^ help: you might have meant to use the associated type: `Self::RuntimeEvent`
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:336:64
+    |
+336 |     type WeightInfo = pallet_collective::weights::SubstrateWeight<Runtime>;
+    |                                                                   ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+336 |     type WeightInfo = pallet_collective::weights::SubstrateWeight<sp_statement_store::Error>;
+    |                                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+    |
+328 | impl<Runtime> pallet_collective::Config<TechnicalCollective> for Runtime {
+    |     +++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:342:33
+    |
+342 | impl clarus_mandate::Config for Runtime {
+    |                                 ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+342 | impl clarus_mandate::Config for sp_statement_store::Error {
+    |                                 ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `RuntimeEvent` in this scope
+   --> runtime/src/config.rs:343:22
+    |
+343 |     type RuntimeEvent = RuntimeEvent;
+    |                         ^^^^^^^^^^^^ help: you might have meant to use the associated type: `Self::RuntimeEvent`
+
+error[E0412]: cannot find type `RuntimeCall` in this scope
+   --> runtime/src/config.rs:344:21
+    |
+344 |     type RuntimeCall = RuntimeCall;
+    |                        ^^^^^^^^^^^ help: you might have meant to use the associated type: `Self::RuntimeCall`
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:350:33
+    |
+350 | impl clarus_relayer::Config for Runtime {
+    |                                 ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+350 | impl clarus_relayer::Config for sp_statement_store::Error {
+    |                                 ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `RuntimeEvent` in this scope
+   --> runtime/src/config.rs:351:22
+    |
+351 |     type RuntimeEvent = RuntimeEvent;
+    |                         ^^^^^^^^^^^^ not found in this scope
+
+error[E0412]: cannot find type `RuntimeCall` in this scope
+   --> runtime/src/config.rs:352:21
+    |
+352 |     type RuntimeCall = RuntimeCall;
+    |                        ^^^^^^^^^^^ not found in this scope
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:359:31
+    |
+359 | impl pallet_token::Config for Runtime {
+    |                               ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+359 | impl pallet_token::Config for sp_statement_store::Error {
+    |                               ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `RuntimeEvent` in this scope
+   --> runtime/src/config.rs:360:25
+    |
+360 |     type RuntimeEvent = RuntimeEvent;
+    |                         ^^^^^^^^^^^^ help: you might have meant to use the associated type: `Self::RuntimeEvent`
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/config.rs:367:59
+    |
+367 |     type WeightInfo = pallet_token::weights::SubstrateWeight<Runtime>;
+    |                                                              ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+367 |     type WeightInfo = pallet_token::weights::SubstrateWeight<sp_statement_store::Error>;
+    |                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+    |
+359 | impl<Runtime> pallet_token::Config for Runtime {
+    |     +++++++++
+
+error[E0412]: cannot find type `Balances` in this scope
+   --> runtime/src/lib.rs:156:27
+    |
+156 | type NegativeImbalance = <Balances as Currency<AccountId>>::NegativeImbalance;
+    |                           ^^^^^^^^ help: a type alias with a similar name exists: `Balance`
+    |
+   ::: /home/asmita/personal/project2_bitcoin/clarus/node/primitives/src/lib.rs:43:1
+    |
+43  | pub type Balance = u128;
+    | ---------------- similarly named type alias `Balance` defined here
+
+error[E0412]: cannot find type `Balances` in this scope
+   --> runtime/src/lib.rs:157:27
+    |
+157 | type PositiveImbalance = <Balances as Currency<AccountId>>::PositiveImbalance;
+    |                           ^^^^^^^^ help: a type alias with a similar name exists: `Balance`
+    |
+   ::: /home/asmita/personal/project2_bitcoin/clarus/node/primitives/src/lib.rs:43:1
+    |
+43  | pub type Balance = u128;
+    | ---------------- similarly named type alias `Balance` defined here
+
+error[E0412]: cannot find type `RuntimeCall` in this scope
+   --> runtime/src/lib.rs:174:38
+    |
+174 | impl frame_support::traits::Contains<RuntimeCall> for BaseFilter {
+    |                                      ^^^^^^^^^^^ not found in this scope
+    |
+help: you might be missing a type parameter
+    |
+174 | impl<RuntimeCall> frame_support::traits::Contains<RuntimeCall> for BaseFilter {
+    |     +++++++++++++
+
+error[E0412]: cannot find type `RuntimeCall` in this scope
+   --> runtime/src/lib.rs:175:21
+    |
+175 |     fn contains(c: &RuntimeCall) -> bool {
+    |                     ^^^^^^^^^^^ not found in this scope
+
+error[E0412]: cannot find type `Grandpa` in this scope
+   --> runtime/src/lib.rs:186:22
+    |
+186 |         pub grandpa: Grandpa,
+    |                      ^^^^^^^ help: a type alias with a similar name exists: `GrandpaId`
+    |
+   ::: /home/asmita/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/a3e4fce/substrate/primitives/consensus/grandpa/src/lib.rs:54:1
+    |
+54  | pub type AuthorityId = app::Public;
+    | -------------------- similarly named type alias `GrandpaId` defined here
+
+error[E0412]: cannot find type `Babe` in this scope
+   --> runtime/src/lib.rs:187:19
+    |
+187 |         pub babe: Babe,
+    |                   ^^^^ not found in this scope
+
+error[E0412]: cannot find type `ImOnline` in this scope
+   --> runtime/src/lib.rs:188:24
+    |
+188 |         pub im_online: ImOnline,
+    |                        ^^^^^^^^ help: a type alias with a similar name exists: `ImOnlineId`
+    |
+   ::: /home/asmita/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/a3e4fce/substrate/frame/im-online/src/lib.rs:128:2
+    |
+128 |     pub type AuthorityId = app_sr25519::Public;
+    |     -------------------- similarly named type alias `ImOnlineId` defined here
+
+error[E0412]: cannot find type `AuthorityDiscovery` in this scope
+   --> runtime/src/lib.rs:189:34
+    |
+189 |         pub authority_discovery: AuthorityDiscovery,
+    |                                  ^^^^^^^^^^^^^^^^^^ help: a type alias with a similar name exists: `AuthorityDiscoveryId`
+    |
+   ::: /home/asmita/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/a3e4fce/substrate/primitives/authority-discovery/src/lib.rs:35:1
+    |
+35  | pub type AuthorityId = app::Public;
+    | -------------------- similarly named type alias `AuthorityDiscoveryId` defined here
+
+error[E0412]: cannot find type `Grandpa` in this scope
+   --> runtime/src/lib.rs:186:22
+    |
+186 |         pub grandpa: Grandpa,
+    |                      ^^^^^^^
+    |
+   ::: /home/asmita/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/a3e4fce/substrate/primitives/consensus/grandpa/src/lib.rs:54:1
+    |
+54  | pub type AuthorityId = app::Public;
+    | -------------------- similarly named type alias `GrandpaId` defined here
+    |
+help: a type alias with a similar name exists
+    |
+186 |         pub grandpa: GrandpaId,
+    |                      ~~~~~~~~~
+help: you might be missing a type parameter
+   --> /home/asmita/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/a3e4fce/substrate/primitives/runtime/src/traits.rs:1995:19
+    |
+1995|         pub struct $name<Grandpa> {
+    |                         +++++++++
+
+error[E0412]: cannot find type `Babe` in this scope
+   --> runtime/src/lib.rs:187:19
+    |
+187 |         pub babe: Babe,
+    |                   ^^^^ not found in this scope
+    |
+help: you might be missing a type parameter
+   --> /home/asmita/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/a3e4fce/substrate/primitives/runtime/src/traits.rs:1995:19
+    |
+1995|         pub struct $name<Babe> {
+    |                         ++++++
+
+error[E0412]: cannot find type `ImOnline` in this scope
+   --> runtime/src/lib.rs:188:24
+    |
+188 |         pub im_online: ImOnline,
+    |                        ^^^^^^^^
+    |
+   ::: /home/asmita/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/a3e4fce/substrate/frame/im-online/src/lib.rs:128:2
+    |
+128 |     pub type AuthorityId = app_sr25519::Public;
+    |     -------------------- similarly named type alias `ImOnlineId` defined here
+    |
+help: a type alias with a similar name exists
+    |
+188 |         pub im_online: ImOnlineId,
+    |                        ~~~~~~~~~~
+help: you might be missing a type parameter
+   --> /home/asmita/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/a3e4fce/substrate/primitives/runtime/src/traits.rs:1995:19
+    |
+1995|         pub struct $name<ImOnline> {
+    |                         ++++++++++
+
+error[E0412]: cannot find type `AuthorityDiscovery` in this scope
+   --> runtime/src/lib.rs:189:34
+    |
+189 |         pub authority_discovery: AuthorityDiscovery,
+    |                                  ^^^^^^^^^^^^^^^^^^
+    |
+   ::: /home/asmita/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/a3e4fce/substrate/primitives/authority-discovery/src/lib.rs:35:1
+    |
+35  | pub type AuthorityId = app::Public;
+    | -------------------- similarly named type alias `AuthorityDiscoveryId` defined here
+    |
+help: a type alias with a similar name exists
+    |
+189 |         pub authority_discovery: AuthorityDiscoveryId,
+    |                                  ~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+   --> /home/asmita/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/a3e4fce/substrate/primitives/runtime/src/traits.rs:1995:19
+    |
+1995|         pub struct $name<AuthorityDiscovery> {
+    |                         ++++++++++++++++++++
+
+error[E0412]: cannot find type `Grandpa` in this scope
+   --> runtime/src/lib.rs:186:22
+    |
+186 |         pub grandpa: Grandpa,
+    |                      ^^^^^^^
+    |
+   ::: /home/asmita/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/a3e4fce/substrate/primitives/consensus/grandpa/src/lib.rs:54:1
+    |
+54  | pub type AuthorityId = app::Public;
+    | -------------------- similarly named type alias `GrandpaId` defined here
+    |
+help: a type alias with a similar name exists
+    |
+186 |         pub grandpa: GrandpaId,
+    |                      ~~~~~~~~~
+help: you might be missing a type parameter
+   --> /home/asmita/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/a3e4fce/substrate/primitives/runtime/src/traits.rs:1992:32
+    |
+1992|             $crate::scale_info::TypeInfo<Grandpa>,
+    |                                         +++++++++
+
+error[E0412]: cannot find type `Babe` in this scope
+   --> runtime/src/lib.rs:187:19
+    |
+187 |         pub babe: Babe,
+    |                   ^^^^ not found in this scope
+    |
+help: you might be missing a type parameter
+   --> /home/asmita/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/a3e4fce/substrate/primitives/runtime/src/traits.rs:1992:32
+    |
+1992|             $crate::scale_info::TypeInfo<Babe>,
+    |                                         ++++++
+
+error[E0412]: cannot find type `ImOnline` in this scope
+   --> runtime/src/lib.rs:188:24
+    |
+188 |         pub im_online: ImOnline,
+    |                        ^^^^^^^^
+    |
+   ::: /home/asmita/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/a3e4fce/substrate/frame/im-online/src/lib.rs:128:2
+    |
+128 |     pub type AuthorityId = app_sr25519::Public;
+    |     -------------------- similarly named type alias `ImOnlineId` defined here
+    |
+help: a type alias with a similar name exists
+    |
+188 |         pub im_online: ImOnlineId,
+    |                        ~~~~~~~~~~
+help: you might be missing a type parameter
+   --> /home/asmita/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/a3e4fce/substrate/primitives/runtime/src/traits.rs:1992:32
+    |
+1992|             $crate::scale_info::TypeInfo<ImOnline>,
+    |                                         ++++++++++
+
+error[E0412]: cannot find type `AuthorityDiscovery` in this scope
+   --> runtime/src/lib.rs:189:34
+    |
+189 |         pub authority_discovery: AuthorityDiscovery,
+    |                                  ^^^^^^^^^^^^^^^^^^
+    |
+   ::: /home/asmita/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/a3e4fce/substrate/primitives/authority-discovery/src/lib.rs:35:1
+    |
+35  | pub type AuthorityId = app::Public;
+    | -------------------- similarly named type alias `AuthorityDiscoveryId` defined here
+    |
+help: a type alias with a similar name exists
+    |
+189 |         pub authority_discovery: AuthorityDiscoveryId,
+    |                                  ~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+   --> /home/asmita/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/a3e4fce/substrate/primitives/runtime/src/traits.rs:1992:32
+    |
+1992|             $crate::scale_info::TypeInfo<AuthorityDiscovery>,
+    |                                         ++++++++++++++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/lib.rs:231:80
+    |
+231 | impl<LocalCall> frame_system::offchain::CreateSignedTransaction<LocalCall> for Runtime
+    |                                                                                ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+231 | impl<LocalCall> frame_system::offchain::CreateSignedTransaction<LocalCall> for sp_statement_store::Error
+    |                                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `RuntimeCall` in this scope
+   --> runtime/src/lib.rs:233:5
+    |
+233 |     RuntimeCall: From<LocalCall>,
+    |     ^^^^^^^^^^^ not found in this scope
+
+error[E0412]: cannot find type `RuntimeCall` in this scope
+   --> runtime/src/lib.rs:236:15
+    |
+236 |         call: RuntimeCall,
+    |               ^^^^^^^^^^^ not found in this scope
+
+error[E0412]: cannot find type `RuntimeCall` in this scope
+   --> runtime/src/lib.rs:241:9
+    |
+241 |         RuntimeCall,
+    |         ^^^^^^^^^^^ not found in this scope
+    |
+help: you might be missing a type parameter
+    |
+231 | impl<LocalCall, RuntimeCall> frame_system::offchain::CreateSignedTransaction<LocalCall> for Runtime
+    |               +++++++++++++
+
+error[E0433]: failed to resolve: use of undeclared type `System`
+   --> runtime/src/lib.rs:250:29
+    |
+250 |         let current_block = System::block_number()
+    |                             ^^^^^^ use of undeclared type `System`
+    |
+help: consider importing one of these items
+    |
+29  + use codec::alloc::alloc::System;
+    |
+29  + use sp_std::alloc::System;
+    |
+29  + use std::alloc::System;
+    |
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/lib.rs:257:48
+    |
+257 |             frame_system::CheckNonZeroSender::<Runtime>::new(),
+    |                                                ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+257 |             frame_system::CheckNonZeroSender::<sp_statement_store::Error>::new(),
+    |                                                ~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+    |
+231 | impl<LocalCall, Runtime> frame_system::offchain::CreateSignedTransaction<LocalCall> for Runtime
+    |               +++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/lib.rs:258:46
+    |
+258 |             frame_system::CheckSpecVersion::<Runtime>::new(),
+    |                                              ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+258 |             frame_system::CheckSpecVersion::<sp_statement_store::Error>::new(),
+    |                                              ~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+    |
+231 | impl<LocalCall, Runtime> frame_system::offchain::CreateSignedTransaction<LocalCall> for Runtime
+    |               +++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/lib.rs:259:44
+    |
+259 |             frame_system::CheckTxVersion::<Runtime>::new(),
+    |                                            ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+259 |             frame_system::CheckTxVersion::<sp_statement_store::Error>::new(),
+    |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+    |
+231 | impl<LocalCall, Runtime> frame_system::offchain::CreateSignedTransaction<LocalCall> for Runtime
+    |               +++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/lib.rs:260:42
+    |
+260 |             frame_system::CheckGenesis::<Runtime>::new(),
+    |                                          ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+260 |             frame_system::CheckGenesis::<sp_statement_store::Error>::new(),
+    |                                          ~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+    |
+231 | impl<LocalCall, Runtime> frame_system::offchain::CreateSignedTransaction<LocalCall> for Runtime
+    |               +++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/lib.rs:261:38
+    |
+261 |             frame_system::CheckEra::<Runtime>::from(era),
+    |                                      ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+261 |             frame_system::CheckEra::<sp_statement_store::Error>::from(era),
+    |                                      ~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+    |
+231 | impl<LocalCall, Runtime> frame_system::offchain::CreateSignedTransaction<LocalCall> for Runtime
+    |               +++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/lib.rs:262:40
+    |
+262 |             frame_system::CheckNonce::<Runtime>::from(nonce),
+    |                                        ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+262 |             frame_system::CheckNonce::<sp_statement_store::Error>::from(nonce),
+    |                                        ~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+    |
+231 | impl<LocalCall, Runtime> frame_system::offchain::CreateSignedTransaction<LocalCall> for Runtime
+    |               +++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/lib.rs:263:41
+    |
+263 |             frame_system::CheckWeight::<Runtime>::new(),
+    |                                         ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+263 |             frame_system::CheckWeight::<sp_statement_store::Error>::new(),
+    |                                         ~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+    |
+231 | impl<LocalCall, Runtime> frame_system::offchain::CreateSignedTransaction<LocalCall> for Runtime
+    |               +++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/lib.rs:264:68
+    |
+264 |             pallet_transaction_payment::ChargeTransactionPayment::<Runtime>::from(tip),
+    |                                                                    ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+264 |             pallet_transaction_payment::ChargeTransactionPayment::<sp_statement_store::Error>::from(tip),
+    |                                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+    |
+231 | impl<LocalCall, Runtime> frame_system::offchain::CreateSignedTransaction<LocalCall> for Runtime
+    |               +++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/lib.rs:278:47
+    |
+278 | impl frame_system::offchain::SigningTypes for Runtime {
+    |                                               ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+278 | impl frame_system::offchain::SigningTypes for sp_statement_store::Error {
+    |                                               ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/lib.rs:283:61
+    |
+283 | impl<C> frame_system::offchain::SendTransactionTypes<C> for Runtime
+    |                                                             ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+283 | impl<C> frame_system::offchain::SendTransactionTypes<C> for sp_statement_store::Error
+    |                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `RuntimeCall` in this scope
+   --> runtime/src/lib.rs:285:5
+    |
+285 |     RuntimeCall: From<C>,
+    |     ^^^^^^^^^^^ not found in this scope
+
+error[E0412]: cannot find type `RuntimeCall` in this scope
+   --> runtime/src/lib.rs:288:28
+    |
+288 |     type OverarchingCall = RuntimeCall;
+    |                            ^^^^^^^^^^^ not found in this scope
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/lib.rs:393:38
+    |
+393 |     frame_system::CheckNonZeroSender<Runtime>,
+    |                                      ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+393 |     frame_system::CheckNonZeroSender<sp_statement_store::Error>,
+    |                                      ~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+    |
+392 | pub type SignedExtra<Runtime> = (
+    |                     +++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/lib.rs:394:36
+    |
+394 |     frame_system::CheckSpecVersion<Runtime>,
+    |                                    ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+394 |     frame_system::CheckSpecVersion<sp_statement_store::Error>,
+    |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+    |
+392 | pub type SignedExtra<Runtime> = (
+    |                     +++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/lib.rs:395:34
+    |
+395 |     frame_system::CheckTxVersion<Runtime>,
+    |                                  ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+395 |     frame_system::CheckTxVersion<sp_statement_store::Error>,
+    |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+    |
+392 | pub type SignedExtra<Runtime> = (
+    |                     +++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/lib.rs:396:32
+    |
+396 |     frame_system::CheckGenesis<Runtime>,
+    |                                ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+396 |     frame_system::CheckGenesis<sp_statement_store::Error>,
+    |                                ~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+    |
+392 | pub type SignedExtra<Runtime> = (
+    |                     +++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/lib.rs:397:28
+    |
+397 |     frame_system::CheckEra<Runtime>,
+    |                            ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+397 |     frame_system::CheckEra<sp_statement_store::Error>,
+    |                            ~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+    |
+392 | pub type SignedExtra<Runtime> = (
+    |                     +++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/lib.rs:398:30
+    |
+398 |     frame_system::CheckNonce<Runtime>,
+    |                              ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+398 |     frame_system::CheckNonce<sp_statement_store::Error>,
+    |                              ~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+    |
+392 | pub type SignedExtra<Runtime> = (
+    |                     +++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/lib.rs:399:31
+    |
+399 |     frame_system::CheckWeight<Runtime>,
+    |                               ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+399 |     frame_system::CheckWeight<sp_statement_store::Error>,
+    |                               ~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+    |
+392 | pub type SignedExtra<Runtime> = (
+    |                     +++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/lib.rs:400:58
+    |
+400 |     pallet_transaction_payment::ChargeTransactionPayment<Runtime>,
+    |                                                          ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+400 |     pallet_transaction_payment::ChargeTransactionPayment<sp_statement_store::Error>,
+    |                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+    |
+392 | pub type SignedExtra<Runtime> = (
+    |                     +++++++++
+
+error[E0412]: cannot find type `RuntimeCall` in this scope
+   --> runtime/src/lib.rs:405:42
+    |
+405 |     generic::UncheckedExtrinsic<Address, RuntimeCall, Signature, SignedExtra>;
+    |                                          ^^^^^^^^^^^ not found in this scope
+    |
+help: you might be missing a type parameter
+    |
+404 | pub type UncheckedExtrinsic<RuntimeCall> =
+    |                            +++++++++++++
+
+error[E0412]: cannot find type `RuntimeCall` in this scope
+   --> runtime/src/lib.rs:407:49
+    |
+407 | pub type SignedPayload = generic::SignedPayload<RuntimeCall, SignedExtra>;
+    |                                                 ^^^^^^^^^^^ not found in this scope
+    |
+help: you might be missing a type parameter
+    |
+407 | pub type SignedPayload<RuntimeCall> = generic::SignedPayload<RuntimeCall, SignedExtra>;
+    |                       +++++++++++++
+
+error[E0412]: cannot find type `RuntimeCall` in this scope
+   --> runtime/src/lib.rs:409:66
+    |
+409 | pub type CheckedExtrinsic = generic::CheckedExtrinsic<AccountId, RuntimeCall, SignedExtra>;
+    |                                                                  ^^^^^^^^^^^ not found in this scope
+    |
+help: you might be missing a type parameter
+    |
+409 | pub type CheckedExtrinsic<RuntimeCall> = generic::CheckedExtrinsic<AccountId, RuntimeCall, SignedExtra>;
+    |                          +++++++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/lib.rs:412:5
+    |
+412 |     Runtime,
+    |     ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+412 |     sp_statement_store::Error,
+    |     ~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+    |
+411 | pub type Executive<Runtime> = frame_executive::Executive<
+    |                   +++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/lib.rs:414:32
+    |
+414 |     frame_system::ChainContext<Runtime>,
+    |                                ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+414 |     frame_system::ChainContext<sp_statement_store::Error>,
+    |                                ~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+    |
+411 | pub type Executive<Runtime> = frame_executive::Executive<
+    |                   +++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/lib.rs:415:5
+    |
+415 |     Runtime,
+    |     ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+415 |     sp_statement_store::Error,
+    |     ~~~~~~~~~~~~~~~~~~~~~~~~~
+help: you might be missing a type parameter
+    |
+411 | pub type Executive<Runtime> = frame_executive::Executive<
+    |                   +++++++++
+
+error[E0412]: cannot find type `AllPalletsWithSystem` in this scope
+   --> runtime/src/lib.rs:416:5
+    |
+416 |     AllPalletsWithSystem,
+    |     ^^^^^^^^^^^^^^^^^^^^ not found in this scope
+    |
+help: you might be missing a type parameter
+    |
+411 | pub type Executive<AllPalletsWithSystem> = frame_executive::Executive<
+    |                   ++++++++++++++++++++++
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/lib.rs:453:34
+    |
+453 |     impl sp_api::Core<Block> for Runtime {
+    |                                  ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+453 |     impl sp_api::Core<Block> for sp_statement_store::Error {
+    |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/lib.rs:467:38
+    |
+467 |     impl sp_api::Metadata<Block> for Runtime {
+    |                                      ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+467 |     impl sp_api::Metadata<Block> for sp_statement_store::Error {
+    |                                      ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/lib.rs:481:52
+    |
+481 |     impl sp_block_builder::BlockBuilder<Block> for Runtime {
+    |                                                    ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+481 |     impl sp_block_builder::BlockBuilder<Block> for sp_statement_store::Error {
+    |                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/lib.rs:499:78
+    |
+499 |     impl sp_transaction_pool::runtime_api::TaggedTransactionQueue<Block> for Runtime {
+    |                                                                              ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+499 |     impl sp_transaction_pool::runtime_api::TaggedTransactionQueue<Block> for sp_statement_store::Error {
+    |                                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/lib.rs:509:52
+    |
+509 |     impl sp_offchain::OffchainWorkerApi<Block> for Runtime {
+    |                                                    ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+509 |     impl sp_offchain::OffchainWorkerApi<Block> for sp_statement_store::Error {
+    |                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/lib.rs:515:47
+    |
+515 |     impl fg_primitives::GrandpaApi<Block> for Runtime {
+    |                                               ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+515 |     impl fg_primitives::GrandpaApi<Block> for sp_statement_store::Error {
+    |                                               ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/lib.rs:551:48
+    |
+551 |     impl sp_consensus_babe::BabeApi<Block> for Runtime {
+    |                                                ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+551 |     impl sp_consensus_babe::BabeApi<Block> for sp_statement_store::Error {
+    |                                                ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/lib.rs:600:67
+    |
+600 |     impl sp_authority_discovery::AuthorityDiscoveryApi<Block> for Runtime {
+    |                                                                   ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+600 |     impl sp_authority_discovery::AuthorityDiscoveryApi<Block> for sp_statement_store::Error {
+    |                                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/lib.rs:606:85
+    |
+606 |     impl frame_system_rpc_runtime_api::AccountNonceApi<Block, AccountId, Nonce> for Runtime {
+    |                                                                                     ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+606 |     impl frame_system_rpc_runtime_api::AccountNonceApi<Block, AccountId, Nonce> for sp_statement_store::Error {
+    |                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0433]: failed to resolve: use of undeclared type `System`
+   --> runtime/src/lib.rs:608:13
+    |
+608 |             System::account_nonce(account)
+    |             ^^^^^^ use of undeclared type `System`
+    |
+help: consider importing one of these items
+    |
+29  + use codec::alloc::alloc::System;
+    |
+29  + use sp_std::alloc::System;
+    |
+29  + use std::alloc::System;
+    |
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/lib.rs:615:11
+    |
+615 |     > for Runtime {
+    |           ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+615 |     > for sp_statement_store::Error {
+    |           ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/lib.rs:630:45
+    |
+630 |     impl sp_session::SessionKeys<Block> for Runtime {
+    |                                             ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+630 |     impl sp_session::SessionKeys<Block> for sp_statement_store::Error {
+    |                                             ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0412]: cannot find type `Runtime` in this scope
+   --> runtime/src/lib.rs:642:97
+    |
+642 |     impl pallet_nomination_pools_runtime_api::NominationPoolsApi<Block, AccountId, Balance> for Runtime {
+    |                                                                                                 ^^^^^^^ not found in this scope
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+642 |     impl pallet_nomination_pools_runtime_api::NominationPoolsApi<Block, AccountId, Balance> for sp_statement_store::Error {
+    |                                                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+warning: unused import: `AsEnsureOriginWithArg`
+  --> runtime/src/lib.rs:41:90
+   |
+41 |     traits::{ConstU16, ConstU32, Currency, Imbalance, KeyOwnerProofSystem, OnUnbalanced, AsEnsureOriginWithArg},
+   |                                                                                          ^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` on by default
+
+warning: unused import: `pallet_session::historical as pallet_session_historical`
+  --> runtime/src/lib.rs:60:5
+   |
+60 | use pallet_session::historical as pallet_session_historical;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `Currency`
+  --> runtime/src/impls.rs:20:29
+   |
+20 | use frame_support::traits::{Currency, OnUnbalanced};
+   |                             ^^^^^^^^
+
+error[E0433]: failed to resolve: use of undeclared type `Authorship`
+  --> runtime/src/impls.rs:27:31
+   |
+27 |         if let Some(author) = Authorship::author() {
+   |                               ^^^^^^^^^^ use of undeclared type `Authorship`
+
+error[E0433]: failed to resolve: use of undeclared type `Balances`
+  --> runtime/src/impls.rs:28:13
+   |
+28 |             Balances::resolve_creating(&author, amount);
+   |             ^^^^^^^^
+   |             |
+   |             use of undeclared type `Balances`
+   |             help: a type alias with a similar name exists: `Balance`
+
+error[E0433]: failed to resolve: use of undeclared crate or module `clarus_relayer`
+   --> runtime/src/config.rs:350:6
+    |
+350 | impl clarus_relayer::Config for Runtime {
+    |      ^^^^^^^^^^^^^^ use of undeclared crate or module `clarus_relayer`
+
+error[E0433]: failed to resolve: use of undeclared type `RuntimeCall`
+   --> runtime/src/lib.rs:179:13
+    |
+179 |             RuntimeCall::Balances(..)
+    |             ^^^^^^^^^^^ use of undeclared type `RuntimeCall`
+
+error[E0433]: failed to resolve: use of undeclared type `Indices`
+   --> runtime/src/lib.rs:272:23
+    |
+272 |         let address = Indices::unlookup(account);
+    |                       ^^^^^^^ use of undeclared type `Indices`
+
+error[E0433]: failed to resolve: use of undeclared type `Runtime`
+   --> runtime/src/lib.rs:469:33
+    |
+469 |             OpaqueMetadata::new(Runtime::metadata().into())
+    |                                 ^^^^^^^ use of undeclared type `Runtime`
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+469 |             OpaqueMetadata::new(sp_statement_store::Error().into())
+    |                                 ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0433]: failed to resolve: use of undeclared type `Runtime`
+   --> runtime/src/lib.rs:473:13
+    |
+473 |             Runtime::metadata_at_version(version)
+    |             ^^^^^^^ use of undeclared type `Runtime`
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+473 |             sp_statement_store::Error(version)
+    |             ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0433]: failed to resolve: use of undeclared type `Runtime`
+   --> runtime/src/lib.rs:477:13
+    |
+477 |             Runtime::metadata_versions()
+    |             ^^^^^^^ use of undeclared type `Runtime`
+    |
+help: there is an enum variant `sp_statement_store::Error::Runtime`; try using the variant's enum
+    |
+477 |             sp_statement_store::Error()
+    |             ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+error[E0433]: failed to resolve: use of undeclared type `Grandpa`
+   --> runtime/src/lib.rs:517:13
+    |
+517 |             Grandpa::grandpa_authorities()
+    |             ^^^^^^^
+    |             |
+    |             use of undeclared type `Grandpa`
+    |             help: a type alias with a similar name exists: `GrandpaId`
+
+error[E0433]: failed to resolve: use of undeclared type `Grandpa`
+   --> runtime/src/lib.rs:521:13
+    |
+521 |             Grandpa::current_set_id()
+    |             ^^^^^^^
+    |             |
+    |             use of undeclared type `Grandpa`
+    |             help: a type alias with a similar name exists: `GrandpaId`
+
+error[E0433]: failed to resolve: use of undeclared type `Grandpa`
+   --> runtime/src/lib.rs:533:13
+    |
+533 |             Grandpa::submit_unsigned_equivocation_report(
+    |             ^^^^^^^
+    |             |
+    |             use of undeclared type `Grandpa`
+    |             help: a type alias with a similar name exists: `GrandpaId`
+
+error[E0433]: failed to resolve: use of undeclared type `Historical`
+   --> runtime/src/lib.rs:545:13
+    |
+545 |             Historical::prove((fg_primitives::KEY_TYPE, authority_id))
+    |             ^^^^^^^^^^ use of undeclared type `Historical`
+
+error[E0433]: failed to resolve: use of undeclared type `Babe`
+   --> runtime/src/lib.rs:553:32
+    |
+553 |             let epoch_config = Babe::epoch_config().unwrap_or(BABE_GENESIS_EPOCH_CONFIG);
+    |                                ^^^^ use of undeclared type `Babe`
+
+error[E0433]: failed to resolve: use of undeclared type `Babe`
+   --> runtime/src/lib.rs:555:32
+    |
+555 |                 slot_duration: Babe::slot_duration(),
+    |                                ^^^^ use of undeclared type `Babe`
+
+error[E0433]: failed to resolve: use of undeclared type `Babe`
+   --> runtime/src/lib.rs:558:30
+    |
+558 |                 authorities: Babe::authorities().to_vec(),
+    |                              ^^^^ use of undeclared type `Babe`
+
+error[E0433]: failed to resolve: use of undeclared type `Babe`
+   --> runtime/src/lib.rs:559:29
+    |
+559 |                 randomness: Babe::randomness(),
+    |                             ^^^^ use of undeclared type `Babe`
+
+error[E0433]: failed to resolve: use of undeclared type `Babe`
+   --> runtime/src/lib.rs:565:13
+    |
+565 |             Babe::current_epoch_start()
+    |             ^^^^ use of undeclared type `Babe`
+
+error[E0433]: failed to resolve: use of undeclared type `Babe`
+   --> runtime/src/lib.rs:569:13
+    |
+569 |             Babe::current_epoch()
+    |             ^^^^ use of undeclared type `Babe`
+
+error[E0433]: failed to resolve: use of undeclared type `Babe`
+   --> runtime/src/lib.rs:573:13
+    |
+573 |             Babe::next_epoch()
+    |             ^^^^ use of undeclared type `Babe`
+
+error[E0433]: failed to resolve: use of undeclared type `Historical`
+   --> runtime/src/lib.rs:582:13
+    |
+582 |             Historical::prove((sp_consensus_babe::KEY_TYPE, authority_id))
+    |             ^^^^^^^^^^ use of undeclared type `Historical`
+
+error[E0433]: failed to resolve: use of undeclared type `Babe`
+   --> runtime/src/lib.rs:593:13
+    |
+593 |             Babe::submit_unsigned_equivocation_report(
+    |             ^^^^ use of undeclared type `Babe`
+
+error[E0433]: failed to resolve: use of undeclared type `AuthorityDiscovery`
+   --> runtime/src/lib.rs:602:13
+    |
+602 |             AuthorityDiscovery::authorities()
+    |             ^^^^^^^^^^^^^^^^^^
+    |             |
+    |             use of undeclared type `AuthorityDiscovery`
+    |             help: a type alias with a similar name exists: `AuthorityDiscoveryId`
+
+error[E0433]: failed to resolve: use of undeclared type `TransactionPayment`
+   --> runtime/src/lib.rs:617:13
+    |
+617 |             TransactionPayment::query_info(uxt, len)
+    |             ^^^^^^^^^^^^^^^^^^
+    |             |
+    |             use of undeclared type `TransactionPayment`
+    |             help: a struct with a similar name exists: `TransactionByteFee`
+
+error[E0433]: failed to resolve: use of undeclared type `TransactionPayment`
+   --> runtime/src/lib.rs:620:13
+    |
+620 |             TransactionPayment::query_fee_details(uxt, len)
+    |             ^^^^^^^^^^^^^^^^^^
+    |             |
+    |             use of undeclared type `TransactionPayment`
+    |             help: a struct with a similar name exists: `TransactionByteFee`
+
+error[E0433]: failed to resolve: use of undeclared type `TransactionPayment`
+   --> runtime/src/lib.rs:623:13
+    |
+623 |             TransactionPayment::weight_to_fee(weight)
+    |             ^^^^^^^^^^^^^^^^^^
+    |             |
+    |             use of undeclared type `TransactionPayment`
+    |             help: a struct with a similar name exists: `TransactionByteFee`
+
+error[E0433]: failed to resolve: use of undeclared type `TransactionPayment`
+   --> runtime/src/lib.rs:626:13
+    |
+626 |             TransactionPayment::length_to_fee(length)
+    |             ^^^^^^^^^^^^^^^^^^
+    |             |
+    |             use of undeclared type `TransactionPayment`
+    |             help: a struct with a similar name exists: `TransactionByteFee`
+
+error[E0433]: failed to resolve: use of undeclared type `NominationPools`
+   --> runtime/src/lib.rs:644:13
+    |
+644 |             NominationPools::api_pending_rewards(who).unwrap_or_default()
+    |             ^^^^^^^^^^^^^^^ use of undeclared type `NominationPools`
+
+error[E0433]: failed to resolve: use of undeclared type `NominationPools`
+   --> runtime/src/lib.rs:648:13
+    |
+648 |             NominationPools::api_points_to_balance(pool_id, points)
+    |             ^^^^^^^^^^^^^^^ use of undeclared type `NominationPools`
+
+error[E0433]: failed to resolve: use of undeclared type `NominationPools`
+   --> runtime/src/lib.rs:652:13
+    |
+652 |             NominationPools::api_balance_to_points(pool_id, new_funds)
+    |             ^^^^^^^^^^^^^^^ use of undeclared type `NominationPools`
+
+Some errors have detailed explanations: E0412, E0433.
+For more information about an error, try `rustc --explain E0412`.
+warning: `clarus-runtime` (lib) generated 3 warnings
+error: could not compile `clarus-runtime` (lib) due to 199 previous errors; 3 warnings emitted

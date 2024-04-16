@@ -50,12 +50,21 @@ pub mod pallet {
     #[pallet::pallet]
     #[pallet::generate_store(pub(super) trait Store)]
     #[pallet::storage_version(STORAGE_VERSION)]
+    #[pallet::without_storage_info]
     pub struct Pallet<T>(_);
 
     #[pallet::storage]
     pub type Relayer<T: Config> =
         StorageValue<_, <T as frame_system::Config>::AccountId, OptionQuery>;
 
+    #[pallet::storage]
+    pub type BitcoinTranxId<T: Config> = 
+    StorageMap<_, Blake2_128Concat, Vec<u8>, T::Balance, ValueQuery>;
+
+    #[pallet::storage]
+    pub type User<T: Config> = 
+    StorageMap<_, Blake2_128Concat, <T as frame_system::Config>::AccountId, Vec<u8>, OptionQuery>;
+    
     #[pallet::call]
     impl<T: Config> Pallet<T> {
         // #[pallet::weight({
@@ -124,10 +133,23 @@ pub mod pallet {
             address: <T as frame_system::Config>::AccountId,
             amount: T::Balance,
             bitcoin_address: Vec<u8>,
+            transaction_id: Vec<u8>
         ) -> DispatchResult {
             let rel = ensure_signed(origin.clone())?;
-            //Store btc add StroageMap , persistent
+            //Storing btc address, persistent
+            // User::<T>::try_mutate(address, |maybe_details| {
+            //     // TODO: return some meaningful error here.
+            //     if let None = maybe_details {
+            //         Some(bitcoin_address)
+            //     }
+            //     else {
+            //         None
+            //     }
+            // });
+            //Extrinsic call to mint token
+            User::<T>::insert(address.clone(), bitcoin_address.clone());
             <pallet_token::Pallet<T>>::mint(origin, assetid, address.clone(), amount)?;
+            BitcoinTranxId::<T>::insert(transaction_id, amount);
             Self::deposit_event(Event::WBtcAdded {
                 relayer: rel,
                 user: address,

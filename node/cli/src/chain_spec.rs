@@ -236,7 +236,7 @@ pub fn clarus_chain_config() -> ChainSpec {
 fn get_chain_properties() -> serde_json::map::Map<String, serde_json::Value> {
     let mut properties = serde_json::map::Map::new();
     properties.insert("tokenDecimals".into(), serde_json::json!(6));
-    properties.insert("tokenSymbol".into(), serde_json::json!("MOID"));
+    properties.insert("tokenSymbol".into(), serde_json::json!("MYID"));
     properties
 }
 
